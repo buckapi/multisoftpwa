@@ -14,11 +14,10 @@
               
                <li><a [routerLink]="['/']">Inicio</a> </li>
                 <li><a [routerLink]="['../about']">Sobre Nosotros</a> </li>
-                <li><a href="">Soluciones</a> </li>
                 <li>
-                    <a href="#" class="desktop-item">Clientes</a>
+                    <a href="#" class="desktop-item">Soluciones</a>
                     <input type="checkbox" id="showMega">
-                    <label for="showMega" class="mobile-item">Mega Menu</label>
+                    <label for="showMega" class="mobile-item">Menu</label>
                     <div class="mega-box">
                       <div class="content">
                         <div class="row">
@@ -47,8 +46,9 @@
                       </div>
                     </div>
                 </li>
-                <li><a href="">Capacitación</a> </li>
-                <li><a href="">Noticias</a> </li>
+                <li><a [routerLink]="['../clientes']">Clientes</a> </li>
+                <li><a [routerLink]="['../capacitaciones']">Capacitación</a> </li>
+                <li><a [routerLink]="['../blog']">Noticias</a> </li>
              
             </ul>
             <ul class="right-nav">
@@ -60,7 +60,7 @@
                     </div>
                 </li> -->
                 <li class="d-none d-lg-inline-block">
-                    <a href="#" class="theme_btn theme_btn_bg white_btn">Contacto<i
+                    <a [routerLink]="['../contact']" class="theme_btn theme_btn_bg white_btn">Contacto<i
                             class="fas fa-chevron-right"></i></a>
                 </li>
             </ul>
