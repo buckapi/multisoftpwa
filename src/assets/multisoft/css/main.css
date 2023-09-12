@@ -211,7 +211,7 @@ li {
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 28px;
   font-family: "Circular Std Book";
@@ -6904,6 +6904,7 @@ input[type=checkbox] {
 .do_box_03 {
   padding: 45px 45px 37px 45px;
   box-shadow: 0px 10px 60px 0px rgba(220, 220, 220, 0.27);
+  border-radius: 10%;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .do_box_03 {
