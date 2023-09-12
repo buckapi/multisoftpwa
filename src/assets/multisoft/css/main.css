@@ -4901,6 +4901,7 @@ input.main-search-input:-ms-input-placeholder {
   border: 1px solid #ededed;
   padding: 40px 0;
   transition: 0.3s;
+  border-radius: 5%;
 }
 .team-wrapper h4 {
   margin-bottom: 10px;
