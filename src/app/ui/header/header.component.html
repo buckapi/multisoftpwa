@@ -1,0 +1,71 @@
+<header>
+       
+        <nav>
+          <div class="wrapper">
+            <div class="logo"><a class="logo-img" href="index.html"><img style="    max-width: 65%;  padding: 10px;" src="assets/multisoft/img/logo/header_logo_06.png"
+                   alt=""></a>
+            </div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+
+            <ul class="nav-links">
+              <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+              
+              
+               <li><a [routerLink]="['/']">Inicio</a> </li>
+                <li><a [routerLink]="['../about']">Sobre Nosotros</a> </li>
+                <li><a href="">Soluciones</a> </li>
+                <li>
+                    <a href="#" class="desktop-item">Clientes</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Mega Menu</label>
+                    <div class="mega-box">
+                      <div class="content">
+                        <div class="row">
+                          <img src="assets/multisoft/img/ofi.jpg" alt="">
+                        </div> 
+                        <div class="row">
+                          <header><i class="fal fa-industry" ></i> Manufactura</header>
+                          <ul class="mega-links">
+                            <li><a href="#">Manufactura 1</a></li>
+                            <li><a href="#">Manufactura 2</a></li>
+                            <li><a href="#">Manufactura 3</a></li>
+                          </ul>
+                        </div>
+                        <div class="row">
+                          <header><i class="fal fa-industry-alt"></i> Rubros</header>
+                          <ul class="mega-linksa">
+                            <li><a href="#">Medicina</a></li>
+                            <li><a href="#">Agricola</a></li>
+                          </ul>
+                        </div>
+                        <div class="row">
+                          <header><i class="fal fa-info-circle"></i> Más soluciones</header>
+                          <p> <a href="#">Consulte nuestro catalogo de soluciones</a> </p>
+                         
+                        </div> 
+                      </div>
+                    </div>
+                </li>
+                <li><a href="">Capacitación</a> </li>
+                <li><a href="">Noticias</a> </li>
+             
+            </ul>
+            <ul class="right-nav">
+                <!-- <li>
+                    <div class="hamburger-menu d-md-block d-lg-none">
+                        <a href="javascript:void(0);">
+                            <i class="far fa-bars"></i>
+                        </a>
+                    </div>
+                </li> -->
+                <li class="d-none d-lg-inline-block">
+                    <a href="#" class="theme_btn theme_btn_bg white_btn">Contacto<i
+                            class="fas fa-chevron-right"></i></a>
+                </li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+          </div>
+        </nav> 
+        
+    </header>

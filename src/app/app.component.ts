@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ScriptService } from '@app/services/script.service';
+import { ScriptStore } from '@app/services/script.store';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,33 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'multisoft';
+  constructor(
+    public script: ScriptService
+  )
+  {
+    this.script.load(
+      'jquery',
+      'bootstrap',
+      'owlCarousel',
+      'isotope',
+      'slick',
+      'magnificPopup',
+      'meanmenu',
+      'metisMenu',
+      'niceSelect',
+      'ajaxForm',
+      'wow',
+      'counterup',
+      'waypoints',
+      'scrollUp',
+      'imagesLoaded',
+      'magnificPopup2',
+      'easypiechart',
+      'tilt',
+      'plugins',
+      'main'
+                )
+  }
+
+ ngAfterViewInit(): void {}
 }
