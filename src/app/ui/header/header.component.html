@@ -1,4 +1,113 @@
 <header>
+<nav>
+  <div class="container">
+    <div class="row">
+      <div class="logo">
+        <a href="#">Mega Menu</a>
+      </div>
+      <div class="mobile_btn2">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="main_menu2">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li class="has_dropdown2"><a href="#">Pages <i class="fas fa-angle-down"></i></a>
+            <ul class="sub_menu2">
+              <li><a href="#">Page 1</a></li>
+              <li class="has_dropdown2"><a href="#">Page 2 <i class="fas fa-angle-right"></i></a>
+                <ul class="sub_menu2">
+                  <li><a href="#">Page 2.1</a></li>
+                  <li><a href="#">Page 2.2</a></li>
+                  <li class="has_dropdown2"><a href="#">Page 2.3 <i class="fas fa-angle-right"></i></a>
+                    <ul class="sub_menu2">
+                      <li><a href="#">Page 2.1</a></li>
+                      <li><a href="#">Page 2.2</a></li>
+                      <li><a href="#">Page 2.3</a></li>
+                      <li><a href="#">Page 2.4</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Page 2.4</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Page 3</a></li>
+              <li><a href="#">Page 4</a></li>
+            </ul>
+          </li>
+          <li class="mega_menu_dropdown has_dropdown2">
+            <a href="#">Shop <i class="fas fa-angle-down"></i></a>
+            <div class="mega_menu sub_menu2">
+              <div class="mega_menu_item">
+                <img src="https://via.placeholder.com/250x300">
+              </div>
+              <div class="mega_menu_item">
+                <h3>Theme Elements</h3>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+              </div>
+              <div class="mega_menu_item">
+                <h3>Theme Elements</h3>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+              </div>
+              <div class="mega_menu_item">
+                <h3>Theme Elements</h3>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+              </div>
+            </div>
+          </li>
+          <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown2">
+            <a href="#">Shop 2 <i class="fas fa-angle-down"></i></a>
+            <div class="mega_menu sub_menu2">
+              <div class="mega_menu_item">
+                <img src="https://via.placeholder.com/250x300">
+              </div>
+              <div class="mega_menu_item">
+                <h3>Theme Elements</h3>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+              </div>
+              <div class="mega_menu_item">
+                <h3>Theme Elements</h3>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+              </div>
+              <div class="mega_menu_item">
+                <h3>Theme Elements</h3>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+                <a href="#">Mega menu item</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+<!-- <header>
        
         <nav>
           <div class="wrapper">
@@ -8,14 +117,13 @@
             <input type="radio" name="slider" id="menu-btn">
             <input type="radio" name="slider" id="close-btn">
 
-            <ul class="nav-links">
+            <ul class="nav-links ">
               <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
               
               
                <li><a [routerLink]="['/']">Inicio</a> </li>
-                <li><a [routerLink]="['../about']">Sobre Nosotros</a> </li>
                 <li>
-                    <a href="#" class="desktop-item">Soluciones</a>
+                    <a href="#" class="desktop-item">Soluciones <i class="far fa-chevron-down"></i></a>
                     <input type="checkbox" id="showMega">
                     <label for="showMega" class="mobile-item">Menu</label>
                     <div class="mega-box">
@@ -24,7 +132,7 @@
                           <img src="assets/multisoft/img/ofi.jpg" alt="">
                         </div> 
                         <div class="row">
-                          <header><i class="fal fa-industry" ></i> Manufactura</header>
+                          <header><i class="fal fa-industry" ></i> Soluciones</header>
                           <ul class="mega-links">
                             <li><a href="#">Manufactura 1</a></li>
                             <li><a href="#">Manufactura 2</a></li>
@@ -32,7 +140,7 @@
                           </ul>
                         </div>
                         <div class="row">
-                          <header><i class="fal fa-industry-alt"></i> Rubros</header>
+                          <header><i class="fal fa-industry-alt"></i> Industrias</header>
                           <ul class="mega-linksa">
                             <li><a href="#">Medicina</a></li>
                             <li><a href="#">Agricola</a></li>
@@ -45,20 +153,56 @@
                         </div> 
                       </div>
                     </div>
-                </li>
-                <li><a [routerLink]="['../clientes']">Clientes</a> </li>
-                <li><a [routerLink]="['../capacitaciones']">Capacitación</a> </li>
-                <li><a [routerLink]="['../blog']">Noticias</a> </li>
-             
+                </li> 
+                <li class="main-menu1">
+                  <a >Soluciones <i class="far fa-chevron-down"></i></a>
+                  <ul class="submenu1">
+                      <li><a [routerLink]="['./capacitaciones']">Capacitacion</a></li>
+                      <li><a [routerLink]="['/']">Cuenta corriente On-Line</a></li>
+                      <li><a [routerLink]="['/']">Descargas</a></li>
+                      <li><a [routerLink]="['./blog']">Noticias</a></li>
+
+                  </ul>
+              </li>
+              <li>
+                <a >Industrias <i class="far fa-chevron-down"></i></a>
+                <ul class="submenu1">
+                    <li><a [routerLink]="['./capacitaciones']">Capacitacion</a></li>
+                    <li><a [routerLink]="['/']">Cuenta corriente On-Line</a></li>
+                    <li><a [routerLink]="['/']">Descargas</a></li>
+                    <li><a [routerLink]="['./blog']">Noticias</a></li>
+
+                </ul>
+            </li>
+                <li>
+                  <a >Utilidades <i class="far fa-chevron-down"></i></a>
+                  <ul class="submenu1">
+                      <li><a [routerLink]="['./capacitaciones']">Capacitacion</a></li>
+                      <li><a [routerLink]="['/']">Cuenta corriente On-Line</a></li>
+                      <li><a [routerLink]="['/']">Descargas</a></li>
+                      <li><a [routerLink]="['./blog']">Noticias</a></li>
+
+                  </ul>
+              </li>
+                <li ><a [routerLink]="['../clientes']">Nosotros <i class="far fa-chevron-down"></i></a>
+                  <ul class="submenu1">
+                    
+                    <li><a [routerLink]="['./about']">Acerca de nosotros</a></li>
+                    <li><a [routerLink]="['./clientes']">Clientes</a></li>
+                    <li><a [routerLink]="['./contact']">Contacto</a></li>
+
+                </ul>
+                 </li>
+              
             </ul>
             <ul class="right-nav">
-                <!-- <li>
+               <li>
                     <div class="hamburger-menu d-md-block d-lg-none">
                         <a href="javascript:void(0);">
                             <i class="far fa-bars"></i>
                         </a>
                     </div>
-                </li> -->
+                </li>
                 <li class="d-none d-lg-inline-block">
                     <a [routerLink]="['../contact']" class="theme_btn theme_btn_bg white_btn">Contacto<i
                             class="fas fa-chevron-right"></i></a>
@@ -68,4 +212,4 @@
           </div>
         </nav> 
         
-    </header>
+    </header> -->
