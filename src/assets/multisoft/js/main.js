@@ -668,29 +668,3 @@
     });
   });
 })(jQuery);
-
-$(function ($) {
-  $(".mobile_btn2").on("click", function () {
-    $(".main_menu2").slideToggle();
-    $(".mobile_btn2 i").toggleClass("fa-xmark fa-xl");
-  });
-
-  if ($(window).width() < 768) {
-    $(".main_menu  ul li a").on("click", function () {
-      $(this)
-        .parent(".has_dropdown")
-        .children(".sub_menu2")
-        .css({ "padding-left": "15px" })
-        .stop()
-        .slideToggle();
-
-      $(this)
-        .parent(".has_dropdown2")
-        .children("a")
-        .find(".fa-angle-right")
-        .stop()
-        .toggleClass("fa-rotate-90");
-    });
-  }
-});
-

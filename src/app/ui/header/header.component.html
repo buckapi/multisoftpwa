@@ -1,215 +1,96 @@
+
 <header>
-<nav>
-  <div class="container">
-    <div class="row">
-      <div class="logo">
-        <a href="#">Mega Menu</a>
-      </div>
-      <div class="mobile_btn2">
-        <i class="fas fa-bars"></i>
-      </div>
-      <div class="main_menu2">
-        <ul>
-          <li><a href="#" class="active">Home</a></li>
-          <li class="has_dropdown2"><a href="#">Pages <i class="fas fa-angle-down"></i></a>
-            <ul class="sub_menu2">
-              <li><a href="#">Page 1</a></li>
-              <li class="has_dropdown2"><a href="#">Page 2 <i class="fas fa-angle-right"></i></a>
-                <ul class="sub_menu2">
-                  <li><a href="#">Page 2.1</a></li>
-                  <li><a href="#">Page 2.2</a></li>
-                  <li class="has_dropdown2"><a href="#">Page 2.3 <i class="fas fa-angle-right"></i></a>
-                    <ul class="sub_menu2">
-                      <li><a href="#">Page 2.1</a></li>
-                      <li><a href="#">Page 2.2</a></li>
-                      <li><a href="#">Page 2.3</a></li>
-                      <li><a href="#">Page 2.4</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Page 2.4</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Page 3</a></li>
-              <li><a href="#">Page 4</a></li>
-            </ul>
-          </li>
-          <li class="mega_menu_dropdown has_dropdown2">
-            <a href="#">Shop <i class="fas fa-angle-down"></i></a>
-            <div class="mega_menu sub_menu2">
-              <div class="mega_menu_item">
-                <img src="https://via.placeholder.com/250x300">
+  <div class="main-header-area pt-10 pb-10">
+      <div class="container">
+          <div class="row align-items-center justify-content-between">
+              <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">
+                  <div class="logo">
+                      <a class="logo-img"  [routerLink]="['/']"><img src="assets/multisoft/img/logo/header_logo_06.png"
+                              alt=""></a>
+                  </div>
               </div>
-              <div class="mega_menu_item">
-                <h3>Theme Elements</h3>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-              </div>
-              <div class="mega_menu_item">
-                <h3>Theme Elements</h3>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-              </div>
-              <div class="mega_menu_item">
-                <h3>Theme Elements</h3>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-              </div>
-            </div>
-          </li>
-          <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown2">
-            <a href="#">Shop 2 <i class="fas fa-angle-down"></i></a>
-            <div class="mega_menu sub_menu2">
-              <div class="mega_menu_item">
-                <img src="https://via.placeholder.com/250x300">
-              </div>
-              <div class="mega_menu_item">
-                <h3>Theme Elements</h3>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-              </div>
-              <div class="mega_menu_item">
-                <h3>Theme Elements</h3>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-              </div>
-              <div class="mega_menu_item">
-                <h3>Theme Elements</h3>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-                <a href="#">Mega menu item</a>
-              </div>
-            </div>
-          </li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+              <div class="col-xxl-7 col-xl-7 col-lg-7 d-none d-lg-block text-lg-center text-xl-right">
+                  <div class="main-menu d-none d-lg-block">
+                      <nav>
+                          <ul>
 
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
-</header>
-
-<!-- <header>
-       
-        <nav>
-          <div class="wrapper">
-            <div class="logo"><a class="logo-img" href="index.html"><img style="    max-width: 65%;  padding: 10px;" src="assets/multisoft/img/logo/header_logo_06.png"
-                   alt=""></a>
-            </div>
-            <input type="radio" name="slider" id="menu-btn">
-            <input type="radio" name="slider" id="close-btn">
-
-            <ul class="nav-links ">
-              <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-              
-              
-               <li><a [routerLink]="['/']">Inicio</a> </li>
-                <li>
-                    <a href="#" class="desktop-item">Soluciones <i class="far fa-chevron-down"></i></a>
-                    <input type="checkbox" id="showMega">
-                    <label for="showMega" class="mobile-item">Menu</label>
-                    <div class="mega-box">
-                      <div class="content">
-                        <div class="row">
-                          <img src="assets/multisoft/img/ofi.jpg" alt="">
-                        </div> 
-                        <div class="row">
-                          <header><i class="fal fa-industry" ></i> Soluciones</header>
-                          <ul class="mega-links">
-                            <li><a href="#">Manufactura 1</a></li>
-                            <li><a href="#">Manufactura 2</a></li>
-                            <li><a href="#">Manufactura 3</a></li>
+                              <li><a [routerLink]="['/']">Soluciones <i class="far fa-chevron-down"></i></a>
+                                  <ul class="submenu">
+                                    
+                                  </ul>
+                              </li>
+                              <li><a [routerLink]="['/']">Industrias <i class="far fa-chevron-down"></i></a>
+                                <ul class="submenu">
+                                   
+                                </ul>
+                            </li>
+                              <li>
+                                  <a  [routerLink]="['/']">Nosotros <i class="far fa-chevron-down"></i></a>
+                                  <ul class="submenu">
+                                      <li><a  [routerLink]="['./about']">Sobre nosotros</a></li>
+                                      <li><a [routerLink]="['./clientes']">Clientes</a></li>
+                                      <li><a [routerLink]="['./contacto']">Contacto</a></li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <a [routerLink]="['/']">Utilidades <i class="far fa-chevron-down"></i></a>
+                                  <ul class="submenu">
+                                      <li><a [routerLink]="['./capacitaciones']">Capacitacion</a></li>
+                                      <li><a [routerLink]="['/']">Cuenta corriente On-Line</a></li>
+                                      <li><a [routerLink]="['./descargas']">Descargas</a></li>
+                                      <li><a [routerLink]="['./blog']">Noticias</a></li>
+                                  </ul>
+                              </li>
                           </ul>
-                        </div>
-                        <div class="row">
-                          <header><i class="fal fa-industry-alt"></i> Industrias</header>
-                          <ul class="mega-linksa">
-                            <li><a href="#">Medicina</a></li>
-                            <li><a href="#">Agricola</a></li>
-                          </ul>
-                        </div>
-                        <div class="row">
-                          <header><i class="fal fa-info-circle"></i> Más soluciones</header>
-                          <p> <a href="#">Consulte nuestro catalogo de soluciones</a> </p>
-                         
-                        </div> 
-                      </div>
-                    </div>
-                </li> 
-                <li class="main-menu1">
-                  <a >Soluciones <i class="far fa-chevron-down"></i></a>
-                  <ul class="submenu1">
-                      <li><a [routerLink]="['./capacitaciones']">Capacitacion</a></li>
-                      <li><a [routerLink]="['/']">Cuenta corriente On-Line</a></li>
-                      <li><a [routerLink]="['/']">Descargas</a></li>
-                      <li><a [routerLink]="['./blog']">Noticias</a></li>
-
-                  </ul>
-              </li>
-              <li>
-                <a >Industrias <i class="far fa-chevron-down"></i></a>
-                <ul class="submenu1">
-                    <li><a [routerLink]="['./capacitaciones']">Capacitacion</a></li>
-                    <li><a [routerLink]="['/']">Cuenta corriente On-Line</a></li>
-                    <li><a [routerLink]="['/']">Descargas</a></li>
-                    <li><a [routerLink]="['./blog']">Noticias</a></li>
-
-                </ul>
-            </li>
-                <li>
-                  <a >Utilidades <i class="far fa-chevron-down"></i></a>
-                  <ul class="submenu1">
-                      <li><a [routerLink]="['./capacitaciones']">Capacitacion</a></li>
-                      <li><a [routerLink]="['/']">Cuenta corriente On-Line</a></li>
-                      <li><a [routerLink]="['/']">Descargas</a></li>
-                      <li><a [routerLink]="['./blog']">Noticias</a></li>
-
-                  </ul>
-              </li>
-                <li ><a [routerLink]="['../clientes']">Nosotros <i class="far fa-chevron-down"></i></a>
-                  <ul class="submenu1">
-                    
-                    <li><a [routerLink]="['./about']">Acerca de nosotros</a></li>
-                    <li><a [routerLink]="['./clientes']">Clientes</a></li>
-                    <li><a [routerLink]="['./contact']">Contacto</a></li>
-
-                </ul>
-                 </li>
+                          
+                      </nav>
+                  </div>
+              </div>
               
-            </ul>
-            <ul class="right-nav">
-               <li>
-                    <div class="hamburger-menu d-md-block d-lg-none">
-                        <a href="javascript:void(0);">
-                            <i class="far fa-bars"></i>
-                        </a>
-                    </div>
-                </li>
-                <li class="d-none d-lg-inline-block">
-                    <a [routerLink]="['../contact']" class="theme_btn theme_btn_bg white_btn">Contacto<i
-                            class="fas fa-chevron-right"></i></a>
-                </li>
-            </ul>
-            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+              <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-6 text-end">
+                  <ul class="right-nav head-01 d-inline-flex">
+                      <!-- <li>
+                          <div class="hamburger-menu d-md-block d-lg-none">
+                              <a href="javascript:void(0);">
+                                  <i class="far fa-bars"></i>
+                              </a>
+                          </div>
+                      </li> -->
+                        <li>
+                            <div class="hamburger-menu d-md-block d-lg-none" (click)="toggleMenu()">
+                                <i class="far fa-bars"></i>
+                            </div>
+                        </li>
+                        <div *ngIf="menuOpen" class="menu-overlay">
+                            <div class="menu-container">
+                                <button class="close-button" (click)="toggleMenu()">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <ul class="menu">
+                                    <li *ngFor="let menuItem of menuItems; let i = index">
+                                        <a (click)="toggleSubMenu(i)">{{ menuItem.label }} <i class="far fa-chevron-down"></i></a>
+                                        <ul class="submenu" *ngIf="subMenusOpen['subMenu' + i]">
+                                            <li *ngFor="let subItem of menuItem.subMenu">
+                                                <a [routerLink]="subItem.routerLink">{{ subItem.label }}</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                         </div>
+                     <li class="mr-10 d-none d-lg-inline-block">
+                        <a  class="theme_btn theme_btn_bg">Solicitar Demo<i
+                                class="fas fa-chevron-right"></i></a>
+                    </li>
+                     
+                      <!-- <li class="d-none d-xxl-inline-block">
+                          <a href="contact.html" class="theme_btn theme_btn_bg">free trial <i
+                                  class="fas fa-chevron-right"></i></a>
+                      </li> -->
+                  </ul>
+              </div>
           </div>
-        </nav> 
-        
-    </header> -->
+      </div>
+  </div>
+</header>
+ 

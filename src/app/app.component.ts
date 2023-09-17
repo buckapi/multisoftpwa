@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ScriptService } from '@app/services/script.service';
-import { ScriptStore } from '@app/services/script.store';
 
 @Component({
   selector: 'app-root',
@@ -35,6 +34,10 @@ export class AppComponent {
       'plugins',
       'main'
                 )
+          .then(data => {
+            // this.yeoman.isLoaded=true;
+          })
+          .catch(error => console.log(error)); 
   }
 
  ngAfterViewInit(): void {}
