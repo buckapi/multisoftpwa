@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
                // Agrega aquí los elementos del submenú para "Nosotros"
                { label: 'Sobre nosotros', routerLink: './about' },
                { label: 'Clientes', routerLink: './clientes' },
-               { label: 'Contacto', routerLink: './contacto' },
+               { label: 'Contacto', routerLink: './contact' },
                // ...
            ]
        },
