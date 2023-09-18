@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ScriptService } from '@app/services/script.service';
+import { setTheme } from 'ngx-bootstrap/utils';
 
 @Component({
   selector: 'app-root',
@@ -38,7 +39,8 @@ export class AppComponent {
             // this.yeoman.isLoaded=true;
           })
           .catch(error => console.log(error)); 
+    setTheme('bs5');
   }
-
+  
  ngAfterViewInit(): void {}
 }

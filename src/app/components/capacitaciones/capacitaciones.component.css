@@ -1,0 +1,18 @@
+.list {
+    padding-top: 25px;
+}
+
+.v {
+    width: 60%;
+}
+
+.to {
+    padding-top: 15%;
+}
+
+@media (max-width: 767px){
+    .job-area {    padding-top: 40%;}
+}
+/* styles.css */
+@import '~ngx-bootstrap/bootstrap.css';
+
