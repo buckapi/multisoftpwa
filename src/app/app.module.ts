@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './ui/header/header.component';
 import { FooterComponent } from './ui/footer/footer.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TooltipModule.forRoot()
+    NgxUsefulSwiperModule,
+    TooltipModule.forRoot(),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
