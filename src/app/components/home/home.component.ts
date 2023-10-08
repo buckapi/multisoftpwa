@@ -9,68 +9,57 @@ import { Yeoman } from '@app/services/yeoman.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements AfterViewChecked {
-  public initializeSwiper = false;
-  // config: SwiperOptions = {
-  //   pagination: { el: '.swiper-pagination', clickable: true },
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev'
-  //   },
-  //   spaceBetween: 30
-  // };
-  
-  public config: SwiperOptions = {
+export class HomeComponent implements AfterViewInit {
+ 
+  config2: SwiperOptions = {
     a11y: { enabled: true },
     direction: 'horizontal',
-    slidesPerView: 2,
+    slidesPerView: 3,
     keyboard: true,
     mousewheel: false,
     scrollbar: false,
     pagination: true,
-    spaceBetween: 5,
+    spaceBetween: 15,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
-    }
+    },
   };
 
   constructor(
     public router:Router,
     public script:ScriptService,
-    public yeoman:Yeoman
+    public yeoman:Yeoman,
+
     ) {
       this.script.load(
-        // 'jquery',
-        // 'bootstrap',
-        'owlCarousel',
+        'modernizr',
+        'jquery',
+        'bootstrap-bundle',
+        'owl-carousel',
         'isotope',
         'slick',
-        'magnificPopup',
+        'magnific-popup',
         'meanmenu',
         'metisMenu',
-        'niceSelect',
-        'ajaxForm',
+        'nice-select',
+        'ajax-form',
         'wow',
         'counterup',
         'waypoints',
         'scrollUp',
-        'imagesLoaded',
-        'magnificPopup2',
+        'imagesloaded',
+        'magnific-popup',
         'easypiechart',
         'tilt',
-        'plugins',
         'main'
-                  )
+      );
      }
     
     
 
-     ngAfterViewChecked() {
-      if (!this.initializeSwiper) {
-        // Inicializa el Swiper aquí
-        this.initializeSwiper = true;
-      }
+     ngAfterViewInit(): void {
     }
+  
 
 }

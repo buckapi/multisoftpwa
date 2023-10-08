@@ -5,11 +5,11 @@ const routes: Routes = [
   { path:'', redirectTo: '/home', pathMatch:'full'},
   { path: 'about', loadChildren: () => import('./components/about/about.module').then(m => m.AboutModule) }, 
   { path: 'home', loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule) }, 
-  { path: 'capacitaciones', loadChildren: () => import('./components/capacitaciones/capacitaciones.module').then(m => m.CapacitacionesModule) }, 
   { path: 'blog', loadChildren: () => import('./components/blog/blog.module').then(m => m.BlogModule) }, 
-  { path: 'clientes', loadChildren: () => import('./components/clientes/clientes.module').then(m => m.ClientesModule) }, 
-  { path: 'contact', loadChildren: () => import('./components/contact/contact.module').then(m => m.ContactModule) }
-
+  { path: 'contact', loadChildren: () => import('./components/contact/contact.module').then(m => m.ContactModule) },
+  { path: 'downloads', loadChildren: () => import('./components/downloads/downloads.module').then(m => m.DownloadsModule) },
+  { path: 'capacity', loadChildren: () => import('./components/capacity/capacity.module').then(m => m.CapacityModule) },
+  { path: 'client', loadChildren: () => import('./components/client/client.module').then(m => m.ClientModule) },
   ];
 
 @NgModule({

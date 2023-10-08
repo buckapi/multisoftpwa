@@ -1,43 +1,4 @@
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    padding-right: 10px;
-}
-
-.menu-container {
-    background-color: #fff; /* Color de fondo del menú */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
-    text-align: center;
-}
-
-.close-button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    color: #1d2d55; /* Color del icono de cierre */
-}
-.hamburger-menu {
-    background: none;
-    border: none;
-    font-size: 20px;
-    position: absolute;
-    top: 25px;
-    right: 15px;
-    cursor: pointer;
-    color: #1d2d55; /* Color del icono de cierre */
+.theme_btn {
+    padding: 20px 23px 20px 23px;
 }
 
