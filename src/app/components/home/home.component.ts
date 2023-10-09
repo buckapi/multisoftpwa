@@ -3,7 +3,7 @@ import { Router} from '@angular/router';
 import { SwiperOptions } from 'swiper';
 import { ScriptService } from '@app/services/script.service';
 import { Yeoman } from '@app/services/yeoman.service';
-import { HttpClient } from '@angular/common/http';
+import { DataApiService } from '@app/services/data-api.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
- 
+  clients:any;
+  categories:any;
   config2: SwiperOptions = {
     a11y: { enabled: true },
     direction: 'horizontal',
@@ -31,6 +32,7 @@ export class HomeComponent implements AfterViewInit {
     public router:Router,
     public script:ScriptService,
     public yeoman:Yeoman,
+    public dataApiService: DataApiService
 
     ) {
       this.script.load(
@@ -55,9 +57,43 @@ export class HomeComponent implements AfterViewInit {
         'tilt',
         'main'
       );
+    this.getAll();
+    this.loadCategories();
      }
     
-    
+     setClient(i:any){
+      let indice= i;
+      this.dataApiService.getAllClient().subscribe(
+       response => {
+         this.clients = response;}
+       )
+     }
+     getAll(){
+   
+      this.dataApiService.getAllClient().subscribe(response=> {
+        this.yeoman.allclient=response;
+     
+      });
+    }
+    setCategory(i:any){
+      let indice= i;
+      this.dataApiService.getAllCategory().subscribe(
+       response => {
+         this.categories = response;}
+       )
+     }
+   
+     loadCategories(){
+       this.dataApiService.getAllCategory().subscribe(
+         response => {
+           this.categories = response;
+           console.log("Categorías cargadas:", this.categories);
+         },
+         error => {
+           console.error("Error al cargar las categorías:", error);
+         }
+       );
+     }
 
      ngAfterViewInit(): void {
     }

@@ -10,13 +10,29 @@ import { DataApiService } from '@app/services/data-api.service';
 
 export class SolutionsComponent implements OnInit {
   categories:any;
-  // category:any;
+  clients:any;
+  client:any;
   constructor(
     public router: Router,
     public yeoman:Yeoman,
     public dataApiService: DataApiService
   ) { 
     this.loadCategories();
+    this.getAll();
+  }
+  setClient(i:any){
+    let indice= i;
+    this.dataApiService.getAllClient().subscribe(
+     response => {
+       this.clients = response;}
+     )
+   }
+   getAll(){
+ 
+    this.dataApiService.getAllClient().subscribe(response=> {
+      this.yeoman.allclient=response;
+   
+    });
   }
   setCategory(i:any){
     let indice= i;

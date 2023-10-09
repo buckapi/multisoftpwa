@@ -18,7 +18,7 @@
                             <br>Software pre y post venta </h2>
                         <p class="wow fadeInUp2 animated" data-wow-delay=".4s">Soluciones en software para su negocios <span>ERP / CRM</span></p>
                         <ul class="btn-list mt-35 wow fadeInUp2 animated" data-wow-delay=".6s">
-                                <li><a class="theme_btn theme_btn_bg" href="#">Ver productos<i
+                                <li><a class="theme_btn theme_btn_bg" [routerLink]="['/solutions']">Ver productos<i
                                             class="fas fa-chevron-right"></i></a>
                                 </li>
                         </ul>
@@ -29,44 +29,44 @@
     </div>
     <!--hero-area end-->
     <!--what-we-do-area start-->
-    <section class="brand-area grey-bg pt-100 pb-85">
+    <section class="brand-area grey-bg pt-100 pb-85" >
         <div class="container">
-            <div class="row brand-active">
-                <div class="col-xl-2">
+            <div class="row brand-active" >
+                <div class="col-xl-2" *ngFor="let client of yeoman.allclient;let i = index">
                     <div class="slide_img">
-                        <a href="contact.html"><img src="assets/multi/img/brand/01.png" alt=""></a>
+                        <img src="{{client.images[0]}}" alt="clientes de Multisoft®" *ngIf="client.images[0]!==undefined"  class="fixed-size-image">
+                    </div>
+                </div>
+                <!-- <div class="col-xl-2">
+                    <div class="slide_img">
+                        <a ><img src="assets/multi/img/brand/02.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-xl-2">
                     <div class="slide_img">
-                        <a href="contact.html"><img src="assets/multi/img/brand/02.png" alt=""></a>
+                        <a ><img src="assets/multi/img/brand/03.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-xl-2">
                     <div class="slide_img">
-                        <a href="contact.html"><img src="assets/multi/img/brand/03.png" alt=""></a>
+                        <a ><img src="assets/multi/img/brand/04.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-xl-2">
                     <div class="slide_img">
-                        <a href="contact.html"><img src="assets/multi/img/brand/04.png" alt=""></a>
+                        <a ><img src="assets/multi/img/brand/05.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-xl-2">
                     <div class="slide_img">
-                        <a href="contact.html"><img src="assets/multi/img/brand/05.png" alt=""></a>
+                        <a ><img src="assets/multi/img/brand/01.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-xl-2">
                     <div class="slide_img">
-                        <a href="contact.html"><img src="assets/multi/img/brand/01.png" alt=""></a>
+                        <a ><img src="assets/multi/img/brand/02.png" alt=""></a>
                     </div>
-                </div>
-                <div class="col-xl-2">
-                    <div class="slide_img">
-                        <a href="contact.html"><img src="assets/multi/img/brand/02.png" alt=""></a>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
