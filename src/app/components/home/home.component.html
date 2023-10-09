@@ -85,7 +85,7 @@
                     data-wow-delay="0.3s">
                     <div class="services">
                         <div class="services__icon ml-50 mr-30">
-                            <img src="assets/multi/img/icon/0.8.png" alt="desarrollo">
+                            <img src="assets/multi/img/icon/01.png" alt="desarrollo">
                         </div>
                         <div class="services__text">
                             <h4>Desarrollo de software</h4>
@@ -98,7 +98,7 @@
                     data-wow-delay="0.4s">
                     <div class="services">
                         <div class="services__icon ml-50 mr-30">
-                            <img src="assets/multi/img/icon/0.9.png" alt="instalacion">
+                            <img src="assets/multi/img/icon/1.png" alt="instalacion">
                         </div>
                         <div class="services__text">
                             <h4>Instalación de sistemas</h4>
@@ -111,7 +111,7 @@
                     data-wow-delay="0.5s">
                     <div class="services">
                         <div class="services__icon ml-50 mr-30">
-                            <img src="assets/multi/img/icon/10.png" alt="implementación">
+                            <img src="assets/multi/img/icon/2.png" alt="implementación">
                         </div>
                         <div class="services__text">
                             <h4>Implementación</h4>
@@ -124,7 +124,7 @@
                     data-wow-delay="0.6s">
                     <div class="services">
                         <div class="services__icon ml-50 mr-30">
-                            <img src="assets/multi/img/icon/11.png" alt="soportetecnico">
+                            <img src="assets/multi/img/icon/3.png" alt="soportetecnico">
                         </div>
                         <div class="services__text">
                             <h4>Servicio técnico</h4>
@@ -143,7 +143,7 @@
                     data-wow-delay="0.7s">
                     <div class="services">
                         <div class="services__icon ml-50 mr-30">
-                            <img src="assets/multi/img/icon/12.png" alt="soportecoorporativo">
+                            <img src="assets/multi/img/icon/4.png" alt="soportecoorporativo">
                         </div>
                         <div class="services__text">
                             <h4>Soporte coorporativo</h4>
@@ -167,10 +167,10 @@
                 </div>
             </div>
             <ul class="nav nav-tabs kw-services-nav" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false"><i class="flaticon-product"></i> Visual business </a>
+                <li class="nav-item" role="presentation" *ngFor="let product of yeoman.allProducts;let i = index"  >
+                    <a class="nav-link" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false"><img src="assets/multi/img/favicon.png"> {{product.name}} </a>
                 </li>
-                <li class="nav-item" role="presentation">
+                <!-- <li class="nav-item" role="presentation">
                     <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="flaticon-product-release"></i>
                         CRM / Workflow</a>
                 </li>
@@ -180,21 +180,19 @@
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link active" id="customize-tab" data-bs-toggle="tab" href="#customize" role="tab" aria-controls="contact" aria-selected="true"><i class="flaticon-solutions"></i> Gestión Contable</a>
-                </li>
+                </li> -->
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <div class="row align-items-center mt-55">
+                    <div class="row align-items-center mt-55"  *ngFor="let product of yeoman.allProducts;let i = index"  (click)="setPreview(i)" style="cursor: pointer;">
                         <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-12">
                             <div class="feature_wrapper_02 mb-30">
                                 <div class="section-title text-left mb-35">
-                                    <h5>Visual business</h5>
-                                    <h2>Discover &amp; growth
-                                        with analysis</h2>
-                                    <p class="mt-30">But must explain to you how all this mistaken denouncing
-                                        praising pain was born and I will give complete </p>
+                                    <h5>{{product.name}}</h5>
+                                   
+                                    <p class="mt-30">{{product.description}} </p>
                                 </div>
-                                <a href="#" class="theme_btn theme_btn_bg">Más info<i class="fas fa-chevron-right"></i></a>
+                                <a (click)="setPreview(i)" class="theme_btn theme_btn_bg">Ver producto<i class="fas fa-chevron-right"></i></a>
                             </div>
                         </div>
                         <div class="col-xxl-8 col-xl-7 col-lg-6 col-md-12">
@@ -204,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <!-- <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                     <div class="row align-items-center mt-55">
                         <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-12">
                             <div class="feature_wrapper_02 mb-30">
@@ -266,11 +264,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
-    <section class="what-do-area-03 what-do-area-05 pb-120" >
+    <section class="what-do-area-03 what-do-area-05 pt-100 pb-120" >
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xxl-8 col-xl-8 col-lg-8 mb-30 wow fadeInLeft animated" data-wow-delay="0.2s">
@@ -290,7 +288,7 @@
                             <li>Fácil de personalizar y actualizar</li>
                             <li>Software ERP a su medida</li>
                         </ul>
-                        <a class="theme_btn  theme_btn_bg" href="#">Industrias <i
+                        <a class="theme_btn  theme_btn_bg" href="#">Ver Industrias aplicadas<i
                                 class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
@@ -300,10 +298,10 @@
                     <div class="we_wrapper_03 w-pt mt-50 mb-30">
                         <div class="section-title orenge-title text-left mb-25">
                             <h5>Preguntas frecuentes</h5>
-                            <h2 class="mb-30">Sobre nuestra gestión</h2>
-                            <p>Textos.</p>
+                            <h2 class="mb-30">Acerca de Multisoft© y nuestros productos</h2>
+                            <p>¿Tenés dudas? Mirá acá abajo, respondemos a todo lo que nos suelen preguntar.</p>
                         </div>
-                        <a class="theme_btn  theme_btn_bg" href="#">Envienos un mensaje <i
+                        <a class="theme_btn  theme_btn_bg" href="#">Mandanos un mensaje<i
                                 class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
@@ -399,13 +397,13 @@
                     <div class="dashbord-wrapper mb-30">
                         <div class="section-title mb-35 wow fadeInUp2 animated" data-wow-delay="0.3s">
                             <div class="white-title">
-                                <h5>Uso y personalización</h5>
-                                <h2 class="mb-30">Mejorando los usos de nuestro ERP/CRM</h2>
+                                <h5>Uso y personalización a tu medida</h5>
+                                <h2 class="mb-30">Optimizamos constantemente el uso de nuestro ERP/CRM</h2>
                             </div>
                             <p>El software como servicio que estabas búscando</p>
                         </div>
                         <a class="theme_btn theme_btn_bg wow fadeInUp2 animated" data-wow-delay="0.3s"
-                            href="#">Cotizar <i class="fas fa-chevron-right"></i></a>
+                            href="#">¡Conseguí el tuyo con anticipación! <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
                 <div class="col-xxl-7 offset-xxl-1 col-xl-6 col-lg-6 col-md-12">
@@ -423,9 +421,9 @@
                 <div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 wow fadeInUp2 animated"
                     data-wow-delay='.3s'>
                     <div class="section-title text-center pr-20 pl-20 mb-90">
-                        <h5>Customer Reviews</h5>
-                        <h2>2356+ customer say about
-                            our support</h2>
+                        <h5>Opiniones de nuestros clientes
+                          </h5>
+                        <h2>2356+ clientes opinan sobre nuestra asistencia</h2>
                     </div>
                 </div>
             </div>

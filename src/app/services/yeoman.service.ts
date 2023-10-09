@@ -9,6 +9,7 @@ export class Yeoman {
   preview:any={};
   user:any;
   all:any=[];
+  allProducts:any={};
   existencias:any=[];
   existenciasSize:number=0;
   allCategoriesSize:number=0;

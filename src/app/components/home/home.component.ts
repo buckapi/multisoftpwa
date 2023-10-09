@@ -59,6 +59,7 @@ export class HomeComponent implements AfterViewInit {
       );
     this.getAll();
     this.loadCategories();
+    this.getAllProducts();
      }
     
      setClient(i:any){
@@ -94,6 +95,19 @@ export class HomeComponent implements AfterViewInit {
          }
        );
      }
+     getAllProducts(){
+    
+      this.dataApiService.getAllProducts().subscribe(response=>{
+        this.yeoman.allProducts=response;
+      
+        
+      });
+    }
+    
+    setPreview(i:any){
+      this.yeoman.preview=this.yeoman.all[i];
+      this.router.navigate(['solutionsdetail']);
+    }
 
      ngAfterViewInit(): void {
     }
