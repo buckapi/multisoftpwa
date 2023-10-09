@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'downloads', loadChildren: () => import('./components/downloads/downloads.module').then(m => m.DownloadsModule) },
   { path: 'capacity', loadChildren: () => import('./components/capacity/capacity.module').then(m => m.CapacityModule) },
   { path: 'client', loadChildren: () => import('./components/client/client.module').then(m => m.ClientModule) },
+  { path: 'solutions', loadChildren: () => import('./components/solutions/solutions.module').then(m => m.SolutionsModule) },
   ];
 
 @NgModule({

@@ -7,7 +7,8 @@ import { HeaderComponent } from './ui/header/header.component';
 import { FooterComponent } from './ui/footer/footer.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
-
+import { DataApiService } from './services/data-api.service';
+import { Yeoman } from './services/yeoman.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,8 +21,9 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
     NgxUsefulSwiperModule,
     TooltipModule.forRoot(),
     
+    
   ],
-  providers: [],
+  providers: [DataApiService,Yeoman],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

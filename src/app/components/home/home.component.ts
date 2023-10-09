@@ -3,6 +3,7 @@ import { Router} from '@angular/router';
 import { SwiperOptions } from 'swiper';
 import { ScriptService } from '@app/services/script.service';
 import { Yeoman } from '@app/services/yeoman.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
