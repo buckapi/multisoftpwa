@@ -1,25 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Yeoman } from '@app/services/yeoman.service';
 import { DataApiService } from '@app/services/data-api.service';
+import { Router } from '@angular/router';
 @Component({
-  selector: 'app-solutions',
-  templateUrl: './solutions.component.html',
-  styleUrls: ['./solutions.component.css']
+  selector: 'app-solutionsdetail',
+  templateUrl: './solutionsdetail.component.html',
+  styleUrls: ['./solutionsdetail.component.css']
 })
-
-export class SolutionsComponent implements OnInit {
+export class SolutionsdetailComponent implements OnInit {
   categories:any;
   clients:any;
   constructor(
-    public router: Router,
-    public yeoman:Yeoman,
-    public dataApiService: DataApiService
-  ) { 
+    public yeoman: Yeoman,
+    public dataApiService: DataApiService,
+    public router: Router
+  ) {
     this.loadCategories();
     this.getAll();
-  }
-  setClient(i:any){
+   }
+   setClient(i:any){
     let indice= i;
     this.dataApiService.getAllClient().subscribe(
      response => {
@@ -52,7 +51,6 @@ export class SolutionsComponent implements OnInit {
        }
      );
    }
-
   ngOnInit(): void {
   }
 

@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'capacity', loadChildren: () => import('./components/capacity/capacity.module').then(m => m.CapacityModule) },
   { path: 'client', loadChildren: () => import('./components/client/client.module').then(m => m.ClientModule) },
   { path: 'solutions', loadChildren: () => import('./components/solutions/solutions.module').then(m => m.SolutionsModule) },
+  { path: 'solutionsdetail', loadChildren: () => import('./components/solutionsdetail/solutionsdetail.module').then(m => m.SolutionsdetailModule) },
   ];
 
 @NgModule({
