@@ -4,6 +4,7 @@ import { SwiperOptions } from 'swiper';
 import { ScriptService } from '@app/services/script.service';
 import { Yeoman } from '@app/services/yeoman.service';
 import { DataApiService } from '@app/services/data-api.service';
+import { Route } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,15 +14,31 @@ import { DataApiService } from '@app/services/data-api.service';
 export class HomeComponent implements AfterViewInit {
   clients:any;
   categories:any;
-  config2: SwiperOptions = {
+
+ 
+  config1: SwiperOptions = {
     a11y: { enabled: true },
     direction: 'horizontal',
-    slidesPerView: 3,
+    slidesPerView: 1,
     keyboard: true,
     mousewheel: false,
     scrollbar: false,
     pagination: true,
-    spaceBetween: 15,
+    spaceBetween: 5,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+  };
+  config: SwiperOptions = {
+    a11y: { enabled: true },
+    direction: 'horizontal',
+    slidesPerView: 2,
+    keyboard: true,
+    mousewheel: false,
+    scrollbar: false,
+    pagination: true,
+    spaceBetween: 5,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
@@ -61,6 +78,7 @@ export class HomeComponent implements AfterViewInit {
     this.loadCategories();
     this.getAllProducts();
      }
+     
     
      setClient(i:any){
       let indice= i;
@@ -108,6 +126,17 @@ export class HomeComponent implements AfterViewInit {
       this.yeoman.preview=this.yeoman.all[i];
       this.router.navigate(['solutionsdetail']);
     }
+
+    setRoute(par:any){
+      let parametro=par;
+      this.yeoman.virtualRoute=parametro;
+    }
+    view(id:any){
+      this.yeoman.preview=this.yeoman.products[id];
+      this.setRoute('solutions');
+    }
+
+    
 
      ngAfterViewInit(): void {
     }

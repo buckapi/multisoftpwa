@@ -3,3 +3,17 @@
     height: 200px;
   
   }
+
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 2px;
+    right: auto;
+    --swiper-theme-color: #3a5baf;
+    --swiper-navigation-color: #3a5baf;
+  }
+
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 2px;
+    left: auto;
+    --swiper-theme-color: #3a5baf;
+    --swiper-navigation-color: #3a5baf;
+}
