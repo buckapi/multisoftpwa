@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { map } from 'rxjs/operators';
 import { Butler } from "@services/butler.service";
 import { Yeoman } from './yeoman.service';
-// import { AuthRESTService } from '@services/authREST.service';
+/* import { AuthRESTService } from '@services/authREST.service'; */
 export interface PartInterface {
 }
 export interface MessageInterface {
@@ -60,69 +60,69 @@ export class DataApiService {
 		  "Content-Type":"application/json"	
 	});
 
-	// deletePart(id: string){
-	// 	const token = this.AuthRESTService.getToken();
-	// 	const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}/?access_token$={token}`;
-	// 	return this.http
-	// 	.delete<PartInterface>(url_api, {headers: this.headers})
-	// 	.pipe(map(data => data));
-	// }
-	// deleteProduct(id: string){
-	// 	const token = this.AuthRESTService.getToken();
-	// 	const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}/?access_token$={token}`;
-	// 	return this.http
-	// 	.delete<PartInterface>(url_api, {headers: this.headers})
-	// 	.pipe(map(data => data));
-	// }
-	// deleteCategory(id: string){
-	// 	const token = this.AuthRESTService.getToken();
-	// 	const url_api=	this.yeoman.origin.restUrl+`/api/categories/${id}/?access_token$={token}`;
-	// 	return this.http
-	// 	.delete<PartInterface>(url_api, {headers: this.headers})
-	// 	.pipe(map(data => data));
-	// }
-	// deleteClient(id: string){
-	// 	const token = this.AuthRESTService.getToken();
-	// 	const url_api=	this.yeoman.origin.restUrl+`/api/clients/${id}/?access_token$={token}`;
-	// 	return this.http
-	// 	.delete<ClientInterface>(url_api, {headers: this.headers})
-	// 	.pipe(map(data => data));
-	// }
-	// deleteTestimony(id: string){
-	// 	const token = this.AuthRESTService.getToken();
-	// 	const url_api=	this.yeoman.origin.restUrl+`/api/testimonials/${id}/?access_token$={token}`;
-	// 	return this.http
-	// 	.delete<ClientInterface>(url_api, {headers: this.headers})
-	// 	.pipe(map(data => data));
-	// }
-	// deleteCar(id: string){
-	// 	const token = this.AuthRESTService.getToken();
-	// 	const url_api=	this.yeoman.origin.restUrl+`/api/cars/${id}/?access_token$={token}`;
-	// 	return this.http
-	// 	.delete<CarInterface>(url_api, {headers: this.headers})
-	// 	.pipe(map(data => data));
-	// }
-	// deleteChat(id: string){
-	// 	const token = this.AuthRESTService.getToken();
-	// 	const url_api=	this.yeoman.origin.restUrl+`/api/chats/${id}/?access_token$={token}`;
-	// 	return this.http
-	// 	.delete<ChatInterface>(url_api, {headers: this.headers})
-	// 	.pipe(map(data => data));
-	// }
-	// deleteMessage(idChat: string){
-	// 	const token = this.AuthRESTService.getToken();
-	// 	const url_api=	this.yeoman.origin.restUrl+`/api/messages?filter[where][idChat]=${idChat}/?access_token$={token}`;
-	// 	return this.http
-	// 	.delete<MessageInterface>(url_api, {headers: this.headers})
-	// 	.pipe(map(data => data));
-	// }
-	// deleteMember(id: string){
-	// 	const token = this.AuthRESTService.getToken();
-	// 	const url_api=	this.yeoman.origin.restUrl+`/api/cards/${id}/?access_token$={token}`;
-	// 	return this.http
-	// 	.delete<MemberInterface>(url_api, {headers: this.headers})
-	// 	.pipe(map(data => data));
-	// }
+/* 	deletePart(id: string){
+		const token = this.AuthRESTService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}/?access_token$={token}`;
+		return this.http
+		.delete<PartInterface>(url_api, {headers: this.headers})
+		.pipe(map(data => data));
+	}
+	deleteProduct(id: string){
+		const token = this.AuthRESTService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}/?access_token$={token}`;
+		return this.http
+		.delete<PartInterface>(url_api, {headers: this.headers})
+		.pipe(map(data => data));
+	}
+	deleteCategory(id: string){
+		const token = this.AuthRESTService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/categories/${id}/?access_token$={token}`;
+		return this.http
+		.delete<PartInterface>(url_api, {headers: this.headers})
+		.pipe(map(data => data));
+	}
+	deleteClient(id: string){
+		const token = this.AuthRESTService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/clients/${id}/?access_token$={token}`;
+		return this.http
+		.delete<ClientInterface>(url_api, {headers: this.headers})
+		.pipe(map(data => data));
+	}
+	deleteTestimony(id: string){
+		const token = this.AuthRESTService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/testimonials/${id}/?access_token$={token}`;
+		return this.http
+		.delete<ClientInterface>(url_api, {headers: this.headers})
+		.pipe(map(data => data));
+	}
+	deleteCar(id: string){
+		const token = this.AuthRESTService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/cars/${id}/?access_token$={token}`;
+		return this.http
+		.delete<CarInterface>(url_api, {headers: this.headers})
+		.pipe(map(data => data));
+	}
+	deleteChat(id: string){
+		const token = this.AuthRESTService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/chats/${id}/?access_token$={token}`;
+		return this.http
+		.delete<ChatInterface>(url_api, {headers: this.headers})
+		.pipe(map(data => data));
+	}
+	deleteMessage(idChat: string){
+		const token = this.AuthRESTService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/messages?filter[where][idChat]=${idChat}/?access_token$={token}`;
+		return this.http
+		.delete<MessageInterface>(url_api, {headers: this.headers})
+		.pipe(map(data => data));
+	}
+	deleteMember(id: string){
+		const token = this.AuthRESTService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/cards/${id}/?access_token$={token}`;
+		return this.http
+		.delete<MemberInterface>(url_api, {headers: this.headers})
+		.pipe(map(data => data));
+	} */
 	getTransationByBranch(branch: string){
 		const url_api = 	this.yeoman.origin.restUrl+`/api/transactions?filter[where][idBranch]=${branch}`;
 		this.transactions = this.http.get(url_api);
@@ -248,12 +248,7 @@ export class DataApiService {
 		this.butler.serialT=this.branch.serialT;
 		return ( this.branch);		
 	}
-	// setSerialT(branch: string){
-	// 	const url_api = 	this.yeoman.origin.restUrl+`/api/branchs/${branch}`;
-	// 	this.branch = this.http.get(url_api);
-	// 	this.butler.serialT=this.branch.serialT;
-	// 	return ( this.branch);		
-	// }
+
 	setSerialT(serial:SerialInterface, branch: string){
 		// let token = this.authService.getToken();
 		const url_api = 	this.yeoman.origin.restUrl+`/api/branchs/${branch}`;

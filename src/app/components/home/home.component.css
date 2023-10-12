@@ -17,3 +17,8 @@
     --swiper-theme-color: #3a5baf;
     --swiper-navigation-color: #3a5baf;
 }
+.fixed-size-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}

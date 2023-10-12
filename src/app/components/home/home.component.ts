@@ -77,6 +77,7 @@ export class HomeComponent implements AfterViewInit {
     this.getAll();
     this.loadCategories();
     this.getAllProducts();
+    this.getAlltest();
      }
      
     
@@ -91,6 +92,13 @@ export class HomeComponent implements AfterViewInit {
    
       this.dataApiService.getAllClient().subscribe(response=> {
         this.yeoman.allclient=response;
+     
+      });
+    }
+    getAlltest(){
+   
+      this.dataApiService.getAllTestimony().subscribe(response=> {
+        this.yeoman.alltestimony=response;
      
       });
     }
