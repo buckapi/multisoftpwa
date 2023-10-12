@@ -30,41 +30,15 @@
     <section class="brand-area grey-bg pt-100 pb-85" >
         <div class="container">
             <div class="row brand-active" >
-                <div class="col-xl-2" *ngFor="let client of yeoman.allclient;let i = index">
-                    <div class="slide_img">
-                        <img src="{{client.images[0]}}" alt="clientes de Multisoft®" *ngIf="client.images[0]!==undefined"  class="fixed-size-image">
+                <swiper [config]="config2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide col-xl-2" *ngFor="let client of yeoman.allclient;let i = index">
+                            <div class="slide_img">
+                                <img src="{{client.images[0]}}" alt="clientes de Multisoft®" *ngIf="client.images[0]!==undefined"  class="fixed-size-image">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- <div class="col-xl-2">
-                    <div class="slide_img">
-                        <a ><img src="assets/multi/img/brand/02.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-xl-2">
-                    <div class="slide_img">
-                        <a ><img src="assets/multi/img/brand/03.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-xl-2">
-                    <div class="slide_img">
-                        <a ><img src="assets/multi/img/brand/04.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-xl-2">
-                    <div class="slide_img">
-                        <a ><img src="assets/multi/img/brand/05.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-xl-2">
-                    <div class="slide_img">
-                        <a ><img src="assets/multi/img/brand/01.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-xl-2">
-                    <div class="slide_img">
-                        <a ><img src="assets/multi/img/brand/02.png" alt=""></a>
-                    </div>
-                </div> -->
+                </swiper>               
             </div>
         </div>
     </section>
@@ -335,7 +309,7 @@
                             <li>Fácil de personalizar y actualizar</li>
                             <li>Software ERP a su medida</li>
                         </ul>
-                        <a class="theme_btn  theme_btn_bg" href="#">Ver Industrias aplicadas<i
+                        <a class="theme_btn  theme_btn_bg"  [routerLink]="['/industries']">Ver Industrias aplicadas<i
                                 class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
@@ -348,7 +322,7 @@
                             <h2 class="mb-30">Acerca de Multisoft© y nuestros productos</h2>
                             <p>¿Tenés dudas? Mirá acá abajo, respondemos a todo lo que nos suelen preguntar.</p>
                         </div>
-                        <a class="theme_btn  theme_btn_bg" href="#">Mandanos un mensaje<i
+                        <a class="theme_btn  theme_btn_bg"  [routerLink]="['/contact']">Mandanos un mensaje<i
                                 class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
@@ -451,7 +425,7 @@
                             <p>El software como servicio que estabas búscando</p>
                         </div>
                         <a class="theme_btn theme_btn_bg wow fadeInUp2 animated" data-wow-delay="0.3s"
-                            href="#">¡Conseguí el tuyo con anticipación! <i class="fas fa-chevron-right"></i></a>
+                        [routerLink]="['/contact']">¡Conseguí el tuyo con anticipación! <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
                 <div class="col-xxl-7 offset-xxl-1 col-xl-6 col-lg-6 col-md-12">

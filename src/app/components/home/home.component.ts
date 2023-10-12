@@ -49,6 +49,30 @@ export class HomeComponent implements AfterViewInit {
       }
     }
   };
+  config2: SwiperOptions = {
+    a11y: { enabled: true },
+    direction: 'horizontal',
+    slidesPerView: 2,
+    keyboard: true,
+    mousewheel: false,
+    scrollbar: false,
+    pagination: true,
+    spaceBetween: 5,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    autoplay: {
+      delay: 800, 
+      disableOnInteraction: false, 
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 6
+      }
+    }
+  };
+  
   
 
   constructor(
