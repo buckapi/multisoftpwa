@@ -33,7 +33,7 @@ export class HomeComponent implements AfterViewInit {
   config: SwiperOptions = {
     a11y: { enabled: true },
     direction: 'horizontal',
-    slidesPerView: 2,
+    slidesPerView: 1,
     keyboard: true,
     mousewheel: false,
     scrollbar: false,
@@ -43,7 +43,13 @@ export class HomeComponent implements AfterViewInit {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
+    breakpoints: {
+           768: {
+        slidesPerView: 2
+      }
+    }
   };
+  
 
   constructor(
     public router:Router,
