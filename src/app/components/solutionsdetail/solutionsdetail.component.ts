@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Yeoman } from '@app/services/yeoman.service';
 import { DataApiService } from '@app/services/data-api.service';
 import { Router } from '@angular/router';
@@ -7,9 +7,10 @@ import { Router } from '@angular/router';
   templateUrl: './solutionsdetail.component.html',
   styleUrls: ['./solutionsdetail.component.css']
 })
-export class SolutionsdetailComponent implements OnInit {
+export class SolutionsdetailComponent implements OnInit, AfterViewInit {
   categories:any;
   clients:any;
+  products:any=[];
   constructor(
     public yeoman: Yeoman,
     public dataApiService: DataApiService,
@@ -17,7 +18,9 @@ export class SolutionsdetailComponent implements OnInit {
   ) {
     this.loadCategories();
     this.getAll();
+console.log("seted: "+JSON.stringify(this.yeoman.preview.name));
    }
+   
    setClient(i:any){
     let indice= i;
     this.dataApiService.getAllClient().subscribe(
@@ -51,8 +54,10 @@ export class SolutionsdetailComponent implements OnInit {
        }
      );
    }
-  ngOnInit(): void {
+   ngAfterViewInit(): void {
     window.scrollTo(0, 0);
   }
-
+  ngOnInit(): void {
+   
+  }
 }

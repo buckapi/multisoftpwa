@@ -11,22 +11,8 @@
                     <div class="services-details-main-info">
                         <h3 class="services-details-content-title">{{yeoman.preview.name}}</h3>
                         <p class="services-details-content-info"> </p>
-                        <p class="services-details-content-desc mb-20">Brolly show off show off pick your nose
-                            and
-                            blow
-                            off well A bit of how’s your father tomfoolery blimey, me old mucker starkers
-                            Queen’s
-                            English dropped a clanger bite your arm spiffing good time burke Why chancer. Hotpot
-                            bum
-                            bag cracking goal young delinquent naff bugger cup of chars bender loo it’s all gone
-                            to
-                            pot the nancy cheeky. </p>
-                        <p class="services-details-content-desc mb-20">At public school cras bog some dodgy chav
-                            Richard
-                            Why argy bargy vagabon William bender matie boy, off his nut chancer Jeffrey up the
-                            kyver say mufty you mug ummm telling pear shaped Oxford owt to do with me do one so
-                            said
-                            are you taking his. </p>
+                        <p class="services-details-content-desc mb-20">{{yeoman.preview.description}} </p>
+                       
                         
                     </div>
                   
@@ -51,8 +37,8 @@
                             <h3 class="project-thumb-title">Modulos</h3>
                             
                             <div class="services-details-project-list-dot">
-                                <ul>
-                                    <li>Tomfoolery cup of char give bell say us bobby pardon.</li>
+                                <ul *ngFor="let product of products; let i = index">
+                                    <li>{{yeoman.preview.moduless}}</li>
                                     <li>Bog-standard smashing bits</li>
                                     <li>Loo wind up Harry bleeding squiffy me </li>
                                     <li>Faff about pukka hunky.</li>

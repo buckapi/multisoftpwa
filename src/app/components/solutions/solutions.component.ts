@@ -17,7 +17,7 @@ export class SolutionsComponent implements OnInit {
     public dataApiService: DataApiService
   ) { 
     this.loadCategories();
-    this.getAll();
+    // this.getAll();
     this.getAllProducts();
   }
   getAllProducts(){
@@ -29,10 +29,6 @@ export class SolutionsComponent implements OnInit {
     });
   }
   
-  setPreview(i:any){
-    this.yeoman.preview=this.yeoman.all[i];
-    this.router.navigate(['solutionsdetail']);
-  }
   setClient(i:any){
     let indice= i;
     this.dataApiService.getAllClient().subscribe(
@@ -40,13 +36,13 @@ export class SolutionsComponent implements OnInit {
        this.clients = response;}
      )
    }
-   getAll(){
+  //  getAll(){
  
-    this.dataApiService.getAllClient().subscribe(response=> {
-      this.yeoman.allclient=response;
+  //   this.dataApiService.getAllClient().subscribe(response=> {
+  //     this.yeoman.allclient=response;
    
-    });
-  }
+  //   });
+  // }
   setCategory(i:any){
     let indice= i;
     this.dataApiService.getAllCategory().subscribe(
@@ -66,6 +62,13 @@ export class SolutionsComponent implements OnInit {
        }
      );
    }
+   setPreview(i:any){
+    /* this.yeoman.preview=this.yeoman.all[i]; */
+    this.yeoman.preview=this.yeoman.allProducts[i];
+    // console.log("seted: "+this.yeoman.preview.name);
+    this.router.navigate(['solutionsdetail']);
+  }
+
 
   ngOnInit(): void {
   }
